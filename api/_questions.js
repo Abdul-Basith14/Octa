@@ -16,13 +16,14 @@ export const questionFallback = {
     generalRule:
       "Every player solves their own challenge. Your answer is only your piece of the team's final solution. Do not wait for another player — solve your challenge and communicate your answer to your team.",
     question:
-      "1234\n→ 2 digits are correct, but both are in the wrong positions.\n\n4671\n→ 2 digits are correct. Exactly 1 is in the correct position.\n\n9024\n→ 3 digits are correct. Exactly 1 is in the correct position.\n\n7442\n→ 3 digits are correct, but none are in the correct positions.\n\n1789\n→ 2 digits are correct, and both are in the correct positions.\n\nWhat is the locker code?",
-    options: [
-      { id: 1, text: "4729" },
-      { id: 2, text: "4279" },
-      { id: 3, text: "4792" },
-      { id: 4, text: "7429" },
-    ],
+  "The locker code has 3 different digits.\n\n362\n→ 1 digit is correct and in the correct position.\n\n175\n→ 1 digit is correct, but it is in the wrong position.\n\n748\n→ 1 digit is correct and in the correct position.\n\n421\n→ 2 digits are correct. Exactly 1 is in the correct position.\n\n485\n→ 1 digit is correct, but it is in the wrong position.\n\nWhat is the locker code?",
+
+options: [
+  { id: 1, text: "314" },
+  { id: 2, text: "341" },
+  { id: 3, text: "431" },
+  { id: 4, text: "413" },
+],
   },
   2: {
     roleId: 2,
@@ -215,17 +216,24 @@ export const questionFallback = {
   },
   8: {
     roleId: 8,
-    roleName: "The Final Journey",
-    title: "THE FINAL JOURNEY",
-    description:
-      "Follow the journey carefully and determine the final direction from the starting point.",
-    question:
-      "A man starts walking from Point A.\n\n- He walks 8 m towards North.\n- Then he turns right and walks 6 m.\n- He then turns right and walks 4 m.\n- He turns left and walks 3 m.\n- Finally, he turns left and walks 2 m.\n\nIn which direction is he from Point A?",
-    options: [
-      { id: 1, text: "North-East" },
-      { id: 2, text: "South-East" },
-      { id: 3, text: "North-West" },
-      { id: 4, text: "South-West" },
+    roleName: "Riddle",
+    title: "RIDDLE",
+    description: "Read carefully. The answer is hidden in the relationships.",
+    rules: [
+      "Read the riddle carefully.",
+      "Pay attention to the family relationships.",
+      "Choose the correct option.",
+      "Your answer is the OPTION NUMBER (1–4).",
+      "Communicate that number to your team.",
     ],
+    question:
+      "I have no brothers or sisters.\n\nThe person standing beside me is the son of my father's only child.\n\nWho is standing beside me?",
+    options: [
+      { id: 1, text: "My father" },
+      { id: 2, text: "My brother" },
+      { id: 3, text: "My son" },
+      { id: 4, text: "My uncle" },
+    ],
+    correctOption: 3,
   },
 };

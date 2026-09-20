@@ -6,7 +6,7 @@ export const roles = [
   { id: 5, name: 'The Courtroom', short: 'Untangle a murder built from contradictions.', mark: '05', accent: 'violet' },
   { id: 6, name: 'The Impostor', short: 'Find the one statement that does not belong.', mark: '06', accent: 'mint' },
   { id: 7, name: 'Find Your Senior', short: 'Identify the senior and trace their Instagram clue.', mark: '07', accent: 'pink' },
-  { id: 8, name: 'The Final Cipher', short: 'Make the last leap from clue to code.', mark: '08', accent: 'gold' },
+  { id: 8, name: 'Riddle', short: 'Read carefully. The answer is hidden in the relationships.', mark: '08', accent: 'gold' },
 ];
 
 export const getRole = (roleId) => roles.find((role) => role.id === Number(roleId));

@@ -99,19 +99,19 @@ options: [
     primaryPuzzle: {
       type: "kannada",
       image: "/assets/sandalwood-sleuth.png",
-      correctAnswer: "S",
+      correctAnswer: "M",
     },
     backupPuzzle: {
       type: "bollywood",
       image: "/assets/bajrangi-bhaijaan.png",
-      correctAnswer: "B",
+      correctAnswer: "M",
     },
     answerType: "letter",
     options: [
-      { id: "E", text: "E" },
-      { id: "F", text: "F" },
-      { id: "S", text: "S" },
-      { id: "G", text: "G" },
+      { id: "A", text: "M" },
+      { id: "R", text: "C" },
+      { id: "M", text: "S" },
+      { id: "K", text: "K" },
     ],
   },
   5: {
@@ -129,6 +129,15 @@ options: [
       "Select the correct option.",
       "Your answer is the OPTION NUMBER.",
     ],
+    question: "WHO IS RESPONSIBLE?",
+    image: "/assets/locked-prop-room.png",
+    options: [
+      { id: 1, text: "Riya" },
+      { id: 2, text: "Arjun" },
+      { id: 3, text: "Vivek" },
+      { id: 4, text: "Meera" },
+    ],
+
     question: "WHO IS RESPONSIBLE?",
     image: "/assets/locked-prop-room.png",
     options: [

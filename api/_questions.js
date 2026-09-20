@@ -99,19 +99,19 @@ options: [
     primaryPuzzle: {
       type: "kannada",
       image: "/assets/sandalwood-sleuth.png",
-      correctAnswer: "S",
+      correctAnswer: "M",
     },
     backupPuzzle: {
       type: "bollywood",
       image: "/assets/bajrangi-bhaijaan.png",
-      correctAnswer: "B",
+      correctAnswer: "M",
     },
     answerType: "letter",
     options: [
-      { id: "E", text: "E" },
-      { id: "F", text: "F" },
-      { id: "S", text: "S" },
-      { id: "G", text: "G" },
+      { id: "A", text: "A" },
+      { id: "R", text: "R" },
+      { id: "M", text: "M" },
+      { id: "K", text: "K" },
     ],
   },
   5: {
@@ -237,3 +237,20 @@ options: [
     correctOption: 3,
   },
 };
+
+export const questions = questionFallback;
+
+function publicPuzzle(puzzle) {
+  if (!puzzle) return puzzle;
+  const { correctAnswer, ...safePuzzle } = puzzle;
+  return safePuzzle;
+}
+
+export function publicQuestion(question) {
+  const { correctOption, correctAnswer, primaryPuzzle, backupPuzzle, ...safeQuestion } = question;
+  return {
+    ...safeQuestion,
+    ...(primaryPuzzle && { primaryPuzzle: publicPuzzle(primaryPuzzle) }),
+    ...(backupPuzzle && { backupPuzzle: publicPuzzle(backupPuzzle) }),
+  };
+}

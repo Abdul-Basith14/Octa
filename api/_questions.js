@@ -108,9 +108,9 @@ options: [
     },
     answerType: "letter",
     options: [
-      { id: "A", text: "A" },
-      { id: "R", text: "R" },
-      { id: "M", text: "M" },
+      { id: "A", text: "M" },
+      { id: "R", text: "C" },
+      { id: "M", text: "S" },
       { id: "K", text: "K" },
     ],
   },
@@ -129,6 +129,15 @@ options: [
       "Select the correct option.",
       "Your answer is the OPTION NUMBER.",
     ],
+    question: "WHO IS RESPONSIBLE?",
+    image: "/assets/locked-prop-room.png",
+    options: [
+      { id: 1, text: "Riya" },
+      { id: 2, text: "Arjun" },
+      { id: 3, text: "Vivek" },
+      { id: 4, text: "Meera" },
+    ],
+
     question: "WHO IS RESPONSIBLE?",
     image: "/assets/locked-prop-room.png",
     options: [
@@ -234,23 +243,5 @@ options: [
       { id: 3, text: "My son" },
       { id: 4, text: "My uncle" },
     ],
-    correctOption: 3,
   },
 };
-
-export const questions = questionFallback;
-
-function publicPuzzle(puzzle) {
-  if (!puzzle) return puzzle;
-  const { correctAnswer, ...safePuzzle } = puzzle;
-  return safePuzzle;
-}
-
-export function publicQuestion(question) {
-  const { correctOption, correctAnswer, primaryPuzzle, backupPuzzle, ...safeQuestion } = question;
-  return {
-    ...safeQuestion,
-    ...(primaryPuzzle && { primaryPuzzle: publicPuzzle(primaryPuzzle) }),
-    ...(backupPuzzle && { backupPuzzle: publicPuzzle(backupPuzzle) }),
-  };
-}

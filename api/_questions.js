@@ -4,15 +4,16 @@ export const questionFallback = {
     roleName: "Math Mayhem",
     title: "THE LOCKER",
     description:
-      "A digital locker has a 4-digit code. Each clue tells you exactly how many digits are correct and whether they are in the correct position.",
-    rules: [
-      "Study all the clues carefully.",
-      "Each clue gives information about the 4-digit locker code.",
-      "Use all the clues together to determine the ONLY possible code.",
-      "Select the correct option.",
-      "Your answer is the OPTION NUMBER (1, 2, 3, or 4).",
-      "Remember your answer and communicate it to your team.",
-    ],
+  "A digital locker has a 3-digit code. Each clue tells you how many digits are correct and whether they are in the correct position.",
+  rules: [
+  "Study all five clues carefully.",
+  "The locker code has 3 different digits.",
+  "Each clue tells you how many digits are correct and whether they are in the correct position.",
+  "Use all five clues together to determine the ONLY possible 3-digit code.",
+  "Select the correct option.",
+  "Your answer is the OPTION NUMBER (1, 2, 3, or 4).",
+  "Remember your answer and communicate it to your team.",
+],
     generalRule:
       "Every player solves their own challenge. Your answer is only your piece of the team's final solution. Do not wait for another player — solve your challenge and communicate your answer to your team.",
     question:
